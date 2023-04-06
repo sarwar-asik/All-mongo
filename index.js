@@ -21,3 +21,7 @@ jobSchema.post("save",function(next){
   console.log("click on post in jobRouter");
   next()
 })
+// instance method
+jobSchema.method.logger = function(){
+    console.log(`clicked on post for ${this.name}`);
+}
