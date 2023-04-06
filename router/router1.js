@@ -28,7 +28,9 @@ app.get("getJob", async (req, res) => {
     .where("password").gt(123123)
     .limit(3).sort({time:-1})
 
-    
+    const getAnUser = await Model1.findById("6343423k345234mll")
+
+
 
 
 
