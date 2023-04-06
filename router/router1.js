@@ -16,27 +16,30 @@ app.get("getJob", async (req, res) => {
     // const getData = await Model1.find({$or:[{_id:"afa12312SD23E234",name:"dinku"}]})
     // const getData = await Model1.find({status:{$ne:"married"}});
 
-
-
-
-
-//#### PProjections
+    //#### PProjections
     // const getData = await Model1.find({},'name details email ')   /// it will show only name ,detail,email property ///
     // const getData = await Model1.find({},'-name details -email ')   /// it will show without name and  email property ///
     // const getData = await Model1.find({}).select({name:1})  /// it will show name property ///
-    const getData = await Model1.find({}).where("name").equal("Dinku")
-    .where("password").gt(123123)
-    .limit(3).sort({time:-1})
+    const getData = await Model1.find({})
+      .where("name")
+      .equal("Dinku")
+      .where("password")
+      .gt(123123)
+      .limit(3)
+      .sort({ time: -1 });
 
-    const getAnUser = await Model1.findById("6343423k345234mll")
+    if (getData) {
+      res.status(200).send({ success: true, data: getData });
+    }
+    const getAnUser = await Model1.findById("6343423k345234mll");
 
-
-
-
-
-    res.status(200).send({success:true,data:getData})
-    
+    if (getAnUser) {
+      res.status(200).send({ success: true, data: getAnUser });
+    }
   } catch (error) {
     res.status(400).send({ status: "failed", error: error.message });
   }
 });
+
+
+

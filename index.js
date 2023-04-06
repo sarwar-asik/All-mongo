@@ -5,7 +5,7 @@ const jobSchema = require("./Schema/Schema1");
 require("dotenv").config();
 
 const app = express();
-const port = process.env.PORT || 30002;
+const port = process.env.PORT ||5000;
 
 // middleware //
 
@@ -25,3 +25,13 @@ jobSchema.post("save",function(next){
 jobSchema.method.logger = function(){
     console.log(`clicked on post for ${this.name}`);
 }
+
+
+
+app.get("/", async (req, res) => {
+    res.send(`Job Server running on ${port} `);
+  });
+  
+  app.listen(port, () => {
+    console.log(`server connected with ${port}`);
+  });
