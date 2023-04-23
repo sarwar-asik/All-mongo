@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const validator = require("validator")
+const { ObjectId } = mongoose.Schema.Types
 
 const brandSchema = mongoose.Schema({
     name:{
@@ -14,5 +15,29 @@ const brandSchema = mongoose.Schema({
     email:{
         type:String,
         validator:[validator.isEmail,"Please provide a valid Email"]
+    },
+    website:{
+        type:String,
+        validator:[validator.isURL,"Please provide a valid Number"]
+    },
+    products:[{
+        name:String,
+        contactNumber:String,
+        id:{
+            type:ObjectId,
+            ref:"Supplier"
+        }
+    }],
+    status:{
+        type:String,
+        enum:["active","inactive"],
+        default:"active"
     }
+},
+{
+    timestamps:true
 })
+
+const Brand = mongoose.model('Brand',brandSchema)
+
+export default Brand
