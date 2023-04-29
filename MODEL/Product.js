@@ -48,6 +48,21 @@ const ProductSchema = mongoose.Schema(
         message: "Please provide valid url",
       },
     },
+    category: {
+      type: String,
+      required: true,
+    },
+    brand: {
+      name: {
+        type: String,
+        required: true,
+      },
+      id: {
+        type: ObjectId,
+        ref: "Brand",
+        required: true,
+      },
+    },
   },
   {
     timestamps: true,
