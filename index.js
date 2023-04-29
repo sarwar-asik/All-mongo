@@ -24,6 +24,15 @@ mongoose
     console.log("Not Connected Database ", { name, message, stack });
   });
 
+
+// route create 
+const productRoute = require("./ROUTES/product.route")
+const BrandRoute = require("./ROUTES/brand.route")
+
+app.use("/api/v1/product",productRoute);
+app.use("/api/v1/brand",BrandRoute)
+
+
 app.get("/", async (req, res) => {
   res.send(`Product Server is Running on ${PORT}`);
 });

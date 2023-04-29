@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
+
 router.post("/addProduct", async (req, res) => {
   try {
     console.log(req.body);
@@ -9,3 +10,5 @@ router.post("/addProduct", async (req, res) => {
     console.log({ name, message, stack });
   }
 });
+
+module.exports = router
