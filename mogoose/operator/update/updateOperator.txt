@@ -1,0 +1,10 @@
+##   $set   :
+
+## addToSet (update a element of array without replacing) 
+        db.practice3.updateOne(
+        {_id:ObjectId('64634040e5044eef0fa0d60e')},
+        {$addToSet:{
+                interests:{$each:["Cooking"]}
+        }},
+        {upsert:true}
+        )
