@@ -56,3 +56,20 @@
             {$project: {name:1,age:1}},
             {$out: "ShortDetails"}
          ])
+
+### $group (for get unique combination in fields)
+
+    1(simple).
+     db.practice3.aggregate([
+
+          {$group: {_id: "$age"}}
+
+        ])
+    2 .
+    db.practice3.aggregate([
+        {$group: {_id: {
+            age:"$salary",
+            gender:"$gender",
+            passion:"$occupation"
+        }}}
+        ])
