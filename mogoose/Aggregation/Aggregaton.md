@@ -101,7 +101,7 @@
             }
         ])
 
-### get Maximum $max and $min  ,$subtract (minus ) salary >>
+### get Maximum $max and $min  ,$subtract (minus ) !!! salary >>
 
         db.practice3.aggregate([
             {
@@ -126,9 +126,7 @@
     }
         ])
 
-
-###  $unwind (for separate group  of array fields)
-
+### $unwind (for separate group of array fields)
 
         db.practice3.aggregate([
         {
@@ -141,7 +139,7 @@
         {$sort: {count:1}}
         ])
 
-###  $facet for sub pipeline
+### $facet for sub pipeline
 
         db.practice3.aggregate([
             {$match: {_id:ObjectId("64634040e5044eef0fa0d60e")}},
@@ -153,9 +151,21 @@
                 "interestsCount":[
                         {$project: {inetresCount:{$size:"$interests"}}}
                         ],
-                        
+
                 "SkillsCount":[
                     {$project: {interesCount:{$size:"$skills"}}}]
             }
         }
+        ])
+
+### $lookup !!! for get 2 db data together
+
+    db.additionalnfo.aggregate([
+        {$match: {userEmail:"cthame2q@tumblr.com"}},
+        {$lookup: {
+            from: "practise3",
+            localField: "userEmail",
+            foreignField: "email",
+            as: "newData"
+            }}
         ])
