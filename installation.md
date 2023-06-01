@@ -29,3 +29,13 @@
 #### 7 . (package.json)
 
      "start":"ts-node-dev --respawn --transpile-only server.ts"
+#### 8 . Eslint (ts.config) and create { .eslintrc}
+
+          "include": ["src"], // which files to compile
+         "exclude": ["node_modules"], // which files to skip
+
+        npm install eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev
+
+
+        finally for organize your code by >>>>>> npx prettier --write src/index.ts
+        
