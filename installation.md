@@ -22,6 +22,7 @@
           "outDir":"/dist"
 #### 6 . (install)
          yarn add dotenv
+         yarn add cors with <npm i --save-dev @types/cors>
 
          yarn add ts-node-dev --dev
 
