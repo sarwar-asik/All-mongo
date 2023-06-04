@@ -7,7 +7,7 @@ import app from "./app";
 async function mainFUnction() {
   try {
     await mongoose.connect(config.data_url as string);
-    console.log("db COnnected successfully ".red.underline.bold);
+    console.log("db Connected successfully ".red.underline.bold);
     app.listen(config.port, () => {
       console.log(`server app listening on port ${config.port}`.red.underline.bold);
     });
