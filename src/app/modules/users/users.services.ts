@@ -1,29 +1,25 @@
+import { User } from './users.model'
+import { IUser } from './users.interface'
 
-import { User } from "./users.model";
-import { IUser } from "./users.interface";
+import config from '../../../config.ts/index'
+import { generateUserId } from './user.utils'
 
-import  config  from "../../../config.ts/index";
-import { generateUserId } from "./user.utils";
+export const createUserServices = async (user: IUser): Promise<IUser | null> => {
+  if (!user?.password) {
+    user.password = config.default_user_pass as string
+  }
+  const id = await generateUserId()
 
+  user.id = id
 
- const createUser = async(user:IUser):Promise<IUser |null >=>{
-   
+  console.log(id, 'from services')
 
-    if(!user?.password){
-        user.password = config.default_user_pass as string
-    }
-    const id = generateUserId()
-
-
-    
-   const createdUser  = await User.create(user)
-   if(!createdUser){
-        throw new Error("Failed to create new User")
-   }
-   return createdUser
-
+  const createdUser = await User.create(user)
+  if (!createdUser) {
+    throw new Error('Failed to create new User')
+  }
+  return createdUser
+  // return null
 }
 
-
-
-export default { createUser}
+// export default { createUser}
