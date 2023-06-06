@@ -44,3 +44,13 @@
                npm i winston
                create src/shared/logger.ts
                use >>> logger.info("successfully connected data")
+# logger (saparate the error in separate file)
+          import path from "path"
+
+         transports: [
+           new winston.transports.Console(),
+            new winston.transports.File({
+                 filename: path.join(process.cwd(), 'logs', 'winston', 'success.log'),
+                    level: 'info',
+          }),
+  ],

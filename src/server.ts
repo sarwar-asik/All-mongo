@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
 import config from './config.ts'
 import 'colors'
-import logger from './shared/logger'
+import { logger, errorLogger } from './shared/logger'
 import app from './app'
 
 async function mainFUnction() {
@@ -17,7 +17,7 @@ async function mainFUnction() {
     })
   } catch (error) {
     // const  {name,message,stack}=error;
-    logger.error('failed to connect '.red, error)
+    errorLogger.error('failed to connect '.red, error)
   }
 }
 
