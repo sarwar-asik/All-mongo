@@ -1,26 +1,26 @@
-import mongoose from "mongoose";
-import config from "./config.ts";
-import "colors";
-
-import app from "./app";
+import mongoose from 'mongoose'
+import config from './config.ts'
+import 'colors'
+import logger from './shared/logger'
+import app from './app'
 
 async function mainFUnction() {
   try {
-    await mongoose.connect(config.data_url as string,{
-      dbName:"University-management"
-    });
-    console.log("db Connected successfully ".red.underline.bold);
+    await mongoose.connect(config.data_url as string, {
+      dbName: 'University-management',
+    })
+
+    logger.info('db Connected successfully ')
+
     app.listen(config.port, () => {
-      console.log(`server app listening on port ${config.port}`.red.underline.bold);
-    });
+      logger.info(`server app listening on port ${config.port}`)
+    })
   } catch (error) {
     // const  {name,message,stack}=error;
-    console.log("failed to connect ".red, error);
+    logger.error('failed to connect '.red, error)
+  }
 }
-}
-
 
 // console.log(config.port,"url".green.bold);
 
-
-mainFUnction();
+mainFUnction()

@@ -39,3 +39,8 @@
 
         finally for organize your code by >>>>>> npx prettier --write src/index.ts
         
+
+ # logger (for store all console.log)
+               npm i winston
+               create src/shared/logger.ts
+               use >>> logger.info("successfully connected data")
