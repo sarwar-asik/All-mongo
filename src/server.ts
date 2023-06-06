@@ -10,14 +10,14 @@ async function mainFUnction() {
       dbName: 'University-management',
     })
 
-    logger.info('db Connected successfully ')
+    logger.info('db Connected successfully '.green.underline.bold)
 
     app.listen(config.port, () => {
-      logger.info(`server app listening on port ${config.port}`)
+      logger.info(`server app listening on port ${config.port}`.green.bold)
     })
   } catch (error) {
     // const  {name,message,stack}=error;
-    errorLogger.error('failed to connect '.red, error)
+    errorLogger.error('failed to connect '.red.underline, error)
   }
 }
 
