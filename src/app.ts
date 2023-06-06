@@ -1,7 +1,7 @@
 // const express = require('express')
 import express, { Application, Request, Response } from 'express'
 import cors from 'cors'
-import userRouter from "./app/modules/users/user.route"
+import userRouter from './app/modules/users/user.route'
 // import { createUser } from './app/modules/users/users.services'
 
 const app: Application = express()
@@ -11,11 +11,9 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
+// Application
 
-
-// Application 
-
-app.use('/api/v1/users',userRouter)
+app.use('/api/v1/users', userRouter)
 
 app.get('/', async (req: Request, res: Response) => {
   //  const addUser = await createUser({id:"445",role:"admin",password:"asdfasdf"})
