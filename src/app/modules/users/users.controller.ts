@@ -1,7 +1,8 @@
-import { Request, Response } from 'express'
+import { NextFunction, Request, Response } from 'express'
 import { createUserServices } from './users.services'
+import { User } from './users.model'
 
-const createUser = async (req: Request, res: Response) => {
+const createUser = async (req: Request, res: Response,next:NextFunction) => {
   try {
     const data = req.body
     // console.log('hitted', data)
@@ -14,8 +15,23 @@ const createUser = async (req: Request, res: Response) => {
         })
     }
   } catch (error) {
-    res.status(400).send({ status: 'had an error', error })
+    // res.status(400).send({ status: 'had an error in createUser', error })
+    next(error)
   }
 }
 
-export default { createUser }
+
+
+const getUser = async (req: Request, res: Response) => {
+  try {
+   const data = await User.find()
+   res.send(data)
+  } catch (error) {
+    res.status(400).send({ status: 'had an error in getUser Controller', error })
+  }
+}
+
+
+
+
+export default { createUser ,getUser}
