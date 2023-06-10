@@ -22,7 +22,7 @@ app.get('/',  async(req: Request, res: Response, next: NextFunction) => {
   //  const addUser = await createUser({id:"445",role:"admin",password:"asdfasdf"})
 
   // res.send(addUser)
-  throw new ApiError(400, 'Error from app.ts')
+  // throw new ApiError(400, 'Error from app.ts')
   // Promise.reject(new Error('Unhandle Promise from app.ts'))
   // console.log(sfdasdf);
 
