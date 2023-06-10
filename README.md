@@ -1,2 +1,7 @@
-# Ready-Bacend1
-"# Ready-Bacend1" 
+# Ready Errorless Server 
+
+## You can clone the server .
+## Ready with esliint ,logger ,global errorhandle , uncaught error 
+
+
+
