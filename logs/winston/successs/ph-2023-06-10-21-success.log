@@ -2,11 +2,11 @@
   message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
   level: 'info',
   label: 'right meow!',
-  timestamp: '2023-06-07T05:03:25.390Z'
+  timestamp: '2023-06-10T15:29:48.700Z'
 }
 {
   message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
   level: 'info',
   label: 'right meow!',
-  timestamp: '2023-06-07T05:03:25.494Z'
+  timestamp: '2023-06-10T15:29:48.732Z'
 }

@@ -1,8 +1,8 @@
-import { NextFunction, Request, Response } from 'express'
+import {  RequestHandler } from 'express'
 import { createUserServices } from './users.services'
 import { User } from './users.model'
 
-const createUser = async (req: Request, res: Response,next:NextFunction) => {
+const createUser:RequestHandler = async (req, res,next) => {
   try {
     const data = req.body
     // console.log('hitted', data)
@@ -22,7 +22,7 @@ const createUser = async (req: Request, res: Response,next:NextFunction) => {
 
 
 
-const getUser = async (req: Request, res: Response) => {
+const getUser:RequestHandler = async (req, res) => {
   try {
    const data = await User.find()
    res.send(data)

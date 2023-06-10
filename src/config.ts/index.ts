@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import dotenv from "dotenv";
 import path from "path";
 // dotenv.config({path:process.cwd()})
@@ -13,3 +14,4 @@ export default {
     default_user_pass:process.env.DEFAULT_STUDENT_PASSWORD
     
 }
+
