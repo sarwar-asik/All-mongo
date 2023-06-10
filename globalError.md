@@ -17,7 +17,6 @@
                 }
           }
 
-
           app.get('/',  (req: Request, res: Response,next:NextFunction) => {
             //  const addUser = await createUser({id:"445",role:"admin",password:"asdfasdf"})
 
@@ -44,7 +43,7 @@
 
 
 
-## Global Error handle  (system-2) 
+## Global Error handle customize system  (system-2) 
 
 ### >>> use in app.use
             app.use(GlobalHandler)
@@ -94,6 +93,119 @@
 ### create src/app/middleware/globalErrorhandler.ts
 
       !!  we can use ErrorRequestHandler for exchange Request,Response,NextFunction !!
+    
 
+    import { ErrorRequestHandler } from 'express'
+    import config from '../../../src/config.ts/index'
+    import { IGenericErrorMessage } from '../../interfaces/Ierror'
+    import handleValidationError from '../../errors/handleValidationError'
+    import ApiError from '../../errors/ApiError'
+
+
+
+    const GlobalHandler:ErrorRequestHandler = (error ,req, res,next) => {
+
+        let statusCode = 500
+        let message = 'Something went wrong'
+
+        let errorMessage: IGenericErrorMessage[] = []
+
+        if (error?.name === 'ValidatorError') {
+            const simplifiedMessage = handleValidationError(error)
+            statusCode = simplifiedMessage?.statusCode
+            message = simplifiedMessage?.message
+
+
+        } else if (error instanceof ApiError) {
+            statusCode = error?.statusCode
+            message = error?.message
+            errorMessage = error?.message ? [{ path: '', message: message }] : []
+        } else if (error instanceof Error) {
+            message = error.message
+            errorMessage = error?.message ? [{ path: '', message: error?.message }] : []
+        }
+
+        
+
+        res.status(statusCode).json({
+            success: false,
+            message,
+            errorMessage,
+            stack: config.env !== 'production' ? error?.stack : undefined,
+        })
+
+        next()
+    }
+
+
+
+    export default GlobalHandler
+
+
+### handle uncaught and other error handle in server.ts (you can use console.log() exchange logger & errorLogger)
+
+
+        /* eslint-disable no-console */
+        import mongoose from 'mongoose'
+        import config from './config.ts'
+        import 'colors'
+        import { logger, errorLogger } from './shared/logger'
+        import app from './app'
+        import { Server } from 'http'
+
+
+        process.on("uncaughtException",err=>{
+
+        errorLogger.error('UnCaught rejection is detected from serve.ts',err)
+        process.exit(1)
+        })
+
+        let server: Server
+
+        async function mainFUnction() {
+
+        try {
+            await mongoose.connect(config.data_url as string, {
+            dbName: 'University-management',
+            })
+
+            logger.info('db Connected successfully '.green.underline.bold)
+
+            server = app.listen(config.port, () => {
+            logger.info(`server app listening on port ${config.port}`.green.bold)
+            })
+        } catch (error) {
+            // const  {name,message,stack}=error;
+            errorLogger.error('failed to connect '.red.underline, error)
+        }
+
+        process.on('unhandledRejection', error => {
+            // eslint-disable-next-line no-console
+            console.log('UnHandle rejection is detected and closing the main() in serve.ts')
+            if (server) {
+            server.close(() => {
+                errorLogger.error(error)
+                process.exit(1)
+            })
+            } else {
+            process.exit(1)
+            }
+        })
+        }
+
+       
+        process.on("SIGTERM",()=>{
+        logger.info("SIGTERM is received ")
+        if(server){
+            server.close()
+        }
+        })
+
+
+
+
+        // console.log(config.port,"url".green.bold);
+
+        mainFUnction()
 
 

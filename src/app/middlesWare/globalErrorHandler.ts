@@ -1,12 +1,20 @@
+/* eslint-disable no-console */
+/* eslint-disable no-unused-expressions */
+
 import { ErrorRequestHandler } from 'express'
 import config from '../../../src/config.ts/index'
 import { IGenericErrorMessage } from '../../interfaces/Ierror'
 import handleValidationError from '../../errors/handleValidationError'
 import ApiError from '../../errors/ApiError'
+import configTs from '../../../src/config.ts/index'
+import { errorLogger } from '../../shared/logger'
 
 
 
 const GlobalHandler:ErrorRequestHandler = (error ,req, res,next) => {
+
+
+  configTs.env === "development" ? console.log("globalErrorHandler",error):errorLogger.error("Error from globalError",error)
 
   let statusCode = 500
   let message = 'Something went wrong'

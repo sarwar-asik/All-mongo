@@ -1,11 +1,11 @@
-import { User } from './users.model'
-import { IUser } from './users.interface'
+import { User } from './user.model'
+import { IUser } from './user.interface'
 
 import config from '../../../config.ts/index'
 import { generateUserId } from './user.utils'
 import ApiError from '../../../errors/ApiError'
 
-export const createUserServices = async (
+ const createUserServices = async (
   user: IUser
 ): Promise<IUser | null> => {
   if (!user?.password) {
@@ -19,10 +19,12 @@ export const createUserServices = async (
 
   const createdUser = await User.create(user)
   if (!createdUser) {
-    throw new ApiError(400,'Failed to create new User')
+    throw new ApiError(400, 'Failed to create new User')
   }
   return createdUser
   // return null
 }
 
+
+export const UserService ={ createUserServices}
 // export default { createUser}

@@ -1,8 +1,10 @@
 // const express = require('express')
 import express, { Application, NextFunction, Request, Response } from 'express'
 import cors from 'cors'
-import userRouter from './app/modules/users/user.route'
+
 import GlobalHandler from './app/middlesWare/globalErrorHandler'
+import { UserRouter } from './app/modules/users/user.route'
+import ApiError from './errors/ApiError'
 // import { createUser } from './app/modules/users/users.services'
 
 const app: Application = express()
@@ -14,20 +16,20 @@ app.use(express.urlencoded({ extended: true }))
 
 // Application
 
-app.use('/api/v1/users', userRouter)
+app.use('/api/v1/users', UserRouter)
 
-
-
-
-app.get('/',  (req: Request, res: Response,next:NextFunction) => {
+app.get('/',  async(req: Request, res: Response, next: NextFunction) => {
   //  const addUser = await createUser({id:"445",role:"admin",password:"asdfasdf"})
 
   // res.send(addUser)
-  // throw new ApiError(400,"Error from app.ts")
+  throw new ApiError(400, 'Error from app.ts')
+  // Promise.reject(new Error('Unhandle Promise from app.ts'))
+  // console.log(sfdasdf);
+
   // throw new Error("Error from app.get")
   // next("next error")
-  res.send({ status: true, data: 'Database connected ' })
-  next()
+  // res.send({ status: true, data: 'Database connected ' })
+  // next()
 })
 
 app.use(GlobalHandler)

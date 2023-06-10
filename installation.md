@@ -45,3 +45,5 @@
                  res.status(400).send({ status: 'had an error in getUser Controller', error })
                 }
         }
+
+### We can use  type UserModel  = Model<IUser,Record<string,unknown>> in user.model.ts

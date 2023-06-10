@@ -30,7 +30,7 @@ const logger = createLogger({
         process.cwd(),
         'logs',
         'winston',
-        'successs',
+        'success',
         'ph-%DATE%-success.log'
       ),
       datePattern: 'YYYY-MM-DD-HH',
