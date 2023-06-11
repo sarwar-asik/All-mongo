@@ -17,12 +17,13 @@
 
     await createUserZodSchema.parseAsync(req)
 
-
 ### SYstem-2 ZOD
-####  src>app>modules>users>userRoutes.ts   :::::
+
+#### src>app>modules>users>userRoutes.ts :::::
+
      router.post('/create-user',validateRequest(UserValidationcreateUserZodSchema), userController.createUser)
 
-####  src>app>middleware>validateRequest ::::
+#### src>app>middleware>validateRequest ::::
 
         import { RequestHandler } from 'express'
         import {AnyZodObject} from 'zod';
@@ -45,10 +46,8 @@
 
         export default validateRequest
 
+#### src>app>modules>users>userValidate ::::
 
-
-
-####  src>app>modules>users>userValidate :::: 
     import { z } from "zod"
     const createUserZodSchema = z.object({
         body: z.object({
@@ -62,3 +61,41 @@
     export const UserValidation = {
         createUserZodSchema
     }
+
+### src>app>middleware>globalError (add the condition in the function) :::::
+
+      else if(error instanceof ZodError){
+            const simplifiedError =handleZOdError(error)
+            statusCode = simplifiedError.statusCode;
+            message =simplifiedError.message;
+            errorMessage = simplifiedError.errorMessages;
+      }
+
+### src> app>errors>handleZOdError :::::
+
+        import { ZodError, ZodIssue } from 'zod';
+        import { IGenericResponse } from '../interfaces/ICommon';
+        import { IGenericErrorMessage } from '../interfaces/Ierror';
+
+        const handleZOdError = (error: ZodError): IGenericResponse => {
+        const statusCode = 400;
+
+        //   console.log(error, 'from handleZodError');
+
+        const errors: IGenericErrorMessage[] = error.issues.map(
+            (issue: ZodIssue)=> {
+            return {
+                path: issue?.path[issue.path.length-1],
+                message: issue?.message,
+            };
+            }
+        );
+
+        return {
+            statusCode,
+            message: 'Validate Error from handleZodError',
+            errorMessages: errors,
+        };
+        };
+
+        export default handleZOdError;

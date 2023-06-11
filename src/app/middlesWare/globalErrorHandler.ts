@@ -9,6 +9,9 @@ import ApiError from '../../errors/ApiError'
 import configTs from '../../../src/config.ts/index'
 import { errorLogger } from '../../shared/logger'
 
+import  {ZodError} from "zod"
+import handleZOdError from '../../errors/handleZOdError'
+
 
 
 const GlobalHandler:ErrorRequestHandler = (error ,req, res,next) => {
@@ -27,7 +30,18 @@ const GlobalHandler:ErrorRequestHandler = (error ,req, res,next) => {
     message = simplifiedMessage?.message
 
 
-  } else if (error instanceof ApiError) {
+  }
+  else if(error instanceof ZodError){
+    const simplifiedError =handleZOdError(error)
+    statusCode = simplifiedError.statusCode;
+    message =simplifiedError.message;
+    errorMessage = simplifiedError.errorMessages;
+
+
+  }
+  
+  
+  else if (error instanceof ApiError) {
     statusCode = error?.statusCode
     message = error?.message
     errorMessage = error?.message ? [{ path: '', message: message }] : []

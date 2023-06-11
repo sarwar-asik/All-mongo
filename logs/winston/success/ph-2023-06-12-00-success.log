@@ -1,0 +1,624 @@
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:01:46.831Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:01:46.853Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:02:03.078Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:02:03.093Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:02:14.552Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:02:14.568Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:02:16.222Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:02:16.236Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:04:32.475Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:04:32.489Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:04:39.443Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:04:39.458Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:04:55.725Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:04:55.763Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:05:04.927Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:05:04.941Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:05:21.620Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:05:21.633Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:05:24.355Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:05:24.369Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:05:26.645Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:05:26.666Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:05:41.182Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:05:41.200Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:07:25.780Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:07:25.795Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:07:29.977Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:07:29.997Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:07:33.041Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:07:33.057Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:08:07.379Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:08:07.393Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:08:23.410Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:08:23.426Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:08:36.823Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:08:36.840Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:08:38.520Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:08:38.532Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:09:46.880Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:09:46.899Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:09:58.377Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:09:58.390Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:10:16.656Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:10:16.670Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:11:09.793Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:11:09.809Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:22:02.913Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:22:02.932Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:22:05.254Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:22:05.269Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:22:57.597Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:22:57.612Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:28:00.256Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:28:00.270Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:34:38.038Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:34:38.062Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:34:57.117Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:34:57.133Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:34:58.756Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:34:58.771Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:35:03.174Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:35:03.189Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:35:10.608Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:35:10.632Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:35:36.172Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:35:36.184Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:35:45.940Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:35:45.957Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:35:52.126Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:35:52.149Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:35:55.046Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:35:55.061Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:36:18.989Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:36:19.047Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:36:45.741Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:36:45.757Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:37:49.626Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:37:49.641Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:37:52.511Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:37:52.528Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:38:00.372Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:38:00.385Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:39:55.851Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:39:55.873Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:40:04.461Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:40:04.479Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:40:18.026Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:40:18.041Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:40:25.568Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:40:25.585Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:40:36.266Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:40:36.282Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:40:48.050Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:40:48.072Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:40:52.652Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:40:52.668Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:41:19.927Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:41:19.943Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:41:54.267Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:41:54.281Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:42:23.370Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:42:23.389Z'
+}
+{
+  message: '\x1B[1m\x1B[4m\x1B[32mdb Connected successfully \x1B[39m\x1B[24m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:42:27.371Z'
+}
+{
+  message: '\x1B[1m\x1B[32mserver app listening on port 5000\x1B[39m\x1B[22m',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-11T18:42:27.384Z'
+}
