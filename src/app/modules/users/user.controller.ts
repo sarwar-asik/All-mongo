@@ -3,9 +3,12 @@ import { RequestHandler } from 'express'
 import { User } from './user.model'
 import { UserService } from './user.services'
 
+
 const createUser: RequestHandler = async (req, res, next) => {
   try {
-    const {user} = req.body
+    
+
+    const { user } = req.body
     // console.log('hitted', data)
     const result = await UserService.createUserServices(user)
     if (result) {
