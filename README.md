@@ -1,4 +1,3 @@
-# Ready Errorless Server
 
 ## You can clone the server .
 

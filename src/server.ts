@@ -6,17 +6,14 @@ import { logger, errorLogger } from './shared/logger'
 import app from './app'
 import { Server } from 'http'
 
-
-process.on("uncaughtException",err=>{
-
-  errorLogger.error('UnCaught rejection is detected from serve.ts',err)
+process.on('uncaughtException', err => {
+  errorLogger.error('UnCaught rejection is detected from serve.ts', err)
   process.exit(1)
 })
 
 let server: Server
 
 async function mainFUnction() {
-
   try {
     await mongoose.connect(config.data_url as string, {
       dbName: 'University-management',
@@ -34,7 +31,9 @@ async function mainFUnction() {
 
   process.on('unhandledRejection', error => {
     // eslint-disable-next-line no-console
-    console.log('UnHandle rejection is detected and closing the main() in serve.ts')
+    console.log(
+      'UnHandle rejection is detected and closing the main() in serve.ts'
+    )
     if (server) {
       server.close(() => {
         errorLogger.error(error)
@@ -46,16 +45,12 @@ async function mainFUnction() {
   })
 }
 
-
-process.on("SIGTERM",()=>{
-  logger.info("SIGTERM is received ")
-  if(server){
+process.on('SIGTERM', () => {
+  logger.info('SIGTERM is received ')
+  if (server) {
     server.close()
   }
 })
-
-
-
 
 // console.log(config.port,"url".green.bold);
 
