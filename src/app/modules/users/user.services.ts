@@ -1,30 +1,28 @@
-import { User } from './user.model'
-import { IUser } from './user.interface'
+/* eslint-disable no-console */
+import { User } from './user.model';
+import { IUser } from './user.interface';
 
-import config from '../../../config.ts/index'
-import { generateUserId } from './user.utils'
-import ApiError from '../../../errors/ApiError'
+import config from '../../../config.ts/index';
+import { generateUserId } from './user.utils';
+import ApiError from '../../../errors/ApiError';
 
- const createUserServices = async (
-  user: IUser
-): Promise<IUser | null> => {
+const createUserServices = async (user: IUser): Promise<IUser | null> => {
   if (!user?.password) {
-    user.password = config.default_user_pass as string
+    user.password = config.default_user_pass as string;
   }
-  const id = await generateUserId()
+  const id = await generateUserId();
 
-  user.id = id
+  user.id = id;
 
-  // console.log(id, 'from services')
+  console.log(user, 'from services');
 
-  const createdUser = await User.create(user)
+  const createdUser = await User.create(user);
   if (!createdUser) {
-    throw new ApiError(400, 'Failed to create new User')
+    throw new ApiError(400, 'Failed to create new User');
   }
-  return createdUser
+  return createdUser;
   // return null
-}
+};
 
-
-export const UserService ={ createUserServices}
+export const UserService = { createUserServices };
 // export default { createUser}
