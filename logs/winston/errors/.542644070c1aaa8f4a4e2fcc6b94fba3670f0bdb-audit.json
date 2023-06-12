@@ -6,11 +6,6 @@
     "auditLog": "C:\\course\\NEXT_LEVEL_2\\university-mangement\\logs\\winston\\errors\\.542644070c1aaa8f4a4e2fcc6b94fba3670f0bdb-audit.json",
     "files": [
         {
-            "date": 1686128376061,
-            "name": "C:\\course\\NEXT_LEVEL_2\\university-mangement\\logs\\winston\\errors\\ph-error-2023-06-07-14-error.log",
-            "hash": "faf63c7a9bdf03051ddd753059fc47fb4b738b5b3687e02dfac5535355faf229"
-        },
-        {
             "date": 1686128404147,
             "name": "C:\\course\\NEXT_LEVEL_2\\university-mangement\\logs\\winston\\errors\\ph-error-2023-06-07-15-error.log",
             "hash": "8ae61a10699930611f90fda64b7b8d10aa0e9fc5ff42ba739dcb559f5ff49593"
@@ -89,6 +84,16 @@
             "date": 1686549606249,
             "name": "C:\\course\\NEXT_LEVEL_2\\university-mangement\\logs\\winston\\errors\\ph-error-2023-06-12-12-error.log",
             "hash": "28c44877ec1de93996147860584f0f6c41e07706be3aaafd8f8ef210e6040658"
+        },
+        {
+            "date": 1686560026478,
+            "name": "C:\\course\\NEXT_LEVEL_2\\university-mangement\\logs\\winston\\errors\\ph-error-2023-06-12-14-error.log",
+            "hash": "e11a38514ecd4382d7c7059f60f06292717ffe5af7ce296050a84f2a5e3a6ebd"
+        },
+        {
+            "date": 1686560403287,
+            "name": "C:\\course\\NEXT_LEVEL_2\\university-mangement\\logs\\winston\\errors\\ph-error-2023-06-12-15-error.log",
+            "hash": "00ccc50afb8e1fb9be03e7e7d0c109730f1ee958bf463628abc22d4412a4747b"
         }
     ],
     "hashType": "sha256"

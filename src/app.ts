@@ -1,27 +1,28 @@
 // const express = require('express')
-import express, { Application, NextFunction, Request, Response } from 'express'
-import cors from 'cors'
+import express, { Application, NextFunction, Request, Response } from 'express';
+import cors from 'cors';
 
-import GlobalHandler from './app/middlesWare/globalErrorHandler'
-import { UserRouter } from './app/modules/users/user.route'
+import GlobalHandler from './app/middlesWare/globalErrorHandler';
 
-import { semesterRouter } from './app/modules/academicSemister/academicSemester.route'
+import routes from './app/routes';
 // import { createUser } from './app/modules/users/users.services'
 
-const app: Application = express()
+const app: Application = express();
 // const port = 3000
 
-app.use(cors())
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Application
 
-app.use('/api/v1/users', UserRouter)
-app.use("/api/v1/semester",semesterRouter)
+// app.use('/api/v1/users', UserRouter)
+// app.use("/api/v1/semester",semesterRouter)
 
+//*** */ or ***////
+app.use('/api/v1', routes);
 
-app.get('/',  async(req: Request, res: Response, next: NextFunction) => {
+app.get('/', async (req: Request, res: Response, next: NextFunction) => {
   //  const addUser = await createUser({id:"445",role:"admin",password:"asdfasdf"})
 
   // res.send(addUser)
@@ -31,10 +32,10 @@ app.get('/',  async(req: Request, res: Response, next: NextFunction) => {
 
   // throw new Error("Error from app.get")
   // next("next error")
-  res.send({ status: true, data: 'Database connected ' })
-  next()
-})
+  res.send({ status: true, data: 'Database connected ' });
+  next();
+});
 
-app.use(GlobalHandler)
+app.use(GlobalHandler);
 
-export default app
+export default app;

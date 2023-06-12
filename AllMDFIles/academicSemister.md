@@ -131,8 +131,9 @@
                 createUserAcademicSemesterSchema
             }
 
-### Check duplicate semester in same month and year(\*\* USE BEFORE MODEL DECLARE IN model.ts) ::::
-
+### Check duplicate semester in same month and year( USE BEFORE MODEL DECLARE IN model.ts) ::::
+              use after schemas >>>>>
+    
     AcademicSemesterSchema.pre('save', async function (next) {
         const isExists = await AcademicSemester.findOne({
             title: this.title,
@@ -143,3 +144,26 @@
         }
         next();
     });
+
+### CHeck valid status code before create in modules>academicSemester>academicSemesterServices ::::::
+
+        export const academicSemesterTittleCodeMapper:{
+            [key:string]:string
+        } = { 
+            Autumn:"01",
+            Summer:"02",
+            Fall:"03"
+        }
+
+        /////  use in the function >>>>
+
+        const createAcademicSemesterService = async (payload: IAcademicSemester
+        ): Promise<IAcademicSemester> => {
+
+        if (academicSemesterTittleCodeMapper[payload.title] !== payload.code) {
+            throw new ApiError(httpStatus.BAD_REQUEST, 'Invalid Semester Code');
+        }
+
+        const result = await AcademicSemester.create(payload);
+        return result;
+        };
