@@ -21,7 +21,10 @@ const createUser: RequestHandler = async (req, res, next) => {
     // res.status(400).send({ status: 'had an error in createUser', error })
     next(error);
   }
-};
+}
+
+
+
 
 const getUser: RequestHandler = async (req, res) => {
   try {

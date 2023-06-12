@@ -4,7 +4,8 @@ import cors from 'cors'
 
 import GlobalHandler from './app/middlesWare/globalErrorHandler'
 import { UserRouter } from './app/modules/users/user.route'
-import ApiError from './errors/ApiError'
+
+import { semesterRouter } from './app/modules/academicSemister/academicSemester.route'
 // import { createUser } from './app/modules/users/users.services'
 
 const app: Application = express()
@@ -17,6 +18,8 @@ app.use(express.urlencoded({ extended: true }))
 // Application
 
 app.use('/api/v1/users', UserRouter)
+app.use("/api/v1/semester",semesterRouter)
+
 
 app.get('/',  async(req: Request, res: Response, next: NextFunction) => {
   //  const addUser = await createUser({id:"445",role:"admin",password:"asdfasdf"})
@@ -28,8 +31,8 @@ app.get('/',  async(req: Request, res: Response, next: NextFunction) => {
 
   // throw new Error("Error from app.get")
   // next("next error")
-  // res.send({ status: true, data: 'Database connected ' })
-  // next()
+  res.send({ status: true, data: 'Database connected ' })
+  next()
 })
 
 app.use(GlobalHandler)

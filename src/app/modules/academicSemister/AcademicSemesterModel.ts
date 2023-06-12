@@ -3,15 +3,20 @@ import {
   AcademicSemesterModel,
   IAcademicSemester,
 } from './academicSemister.interace';
-import { AcademicSemesterCode, AcademicSemesterMonth, AcademicSemesterTitles } from './academicSemester.const';
-
+import {
+  AcademicSemesterCode,
+  AcademicSemesterMonth,
+  AcademicSemesterTitles,
+} from './academicSemester.const';
+import status from 'http-status';
+import ApiError from '../../../errors/ApiError';
 
 const AcademicSemesterSchema = new Schema<IAcademicSemester>(
   {
     title: {
       type: String,
       required: true,
-      enum:AcademicSemesterTitles,
+      enum: AcademicSemesterTitles,
     },
     year: {
       type: Number,
@@ -20,7 +25,7 @@ const AcademicSemesterSchema = new Schema<IAcademicSemester>(
     code: {
       type: String,
       required: true,
-      enum: AcademicSemesterCode
+      enum: AcademicSemesterCode,
     },
     startMonth: {
       type: String,
@@ -35,6 +40,17 @@ const AcademicSemesterSchema = new Schema<IAcademicSemester>(
   },
   { timestamps: true }
 );
+
+AcademicSemesterSchema.pre('save', async function (next) {
+  const isExists = await AcademicSemester.findOne({
+    title: this.title,
+    year: this.year,
+  });
+  if (isExists) {
+    throw new ApiError(status.CONFLICT, 'Already exists the semester');
+  }
+  next();
+});
 
 export const AcademicSemester = model<IAcademicSemester, AcademicSemesterModel>(
   'AcademicSemester',

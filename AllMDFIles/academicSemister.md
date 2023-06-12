@@ -1,4 +1,4 @@
-### AcademicSemester  
+### AcademicSemester
 
 ### src>app>modules>AcademicSemester>AcademicSemester>AcademicSemester.interface :::
 
@@ -15,7 +15,6 @@
         };
 
         export type AcademicSemesterModel = Model<IAcademicSemester>;
-
 
 ### src>app>modules>AcademicSemester>AcademicSemester.model.ts :::
 
@@ -75,11 +74,9 @@
         AcademicSemesterSchema
         );
 
-
 ### src>app>modules>AcademicSemester>AcademicSemester.routes :::
 
 ### src>app>modules>AcademicSemester>AcademicSemester.validation :::
-
 
                 import { z } from "zod"
 
@@ -126,7 +123,7 @@
                 ],{
                     required_error:"Start month is required"
                 })
-                
+
                 }),
             })
 
@@ -134,4 +131,15 @@
                 createUserAcademicSemesterSchema
             }
 
+### Check duplicate semester in same month and year(\*\* USE BEFORE MODEL DECLARE IN model.ts) ::::
 
+    AcademicSemesterSchema.pre('save', async function (next) {
+        const isExists = await AcademicSemester.findOne({
+            title: this.title,
+            year: this.year,
+        });
+        if (isExists) {
+            throw new ApiError(status.CONFLICT, 'Already exists the semester');
+        }
+        next();
+    });
