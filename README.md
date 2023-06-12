@@ -1,4 +1,3 @@
+## University management Server :::::
 
-## You can clone the server .
-
-## Ready with esliint ,logger ,global errorhandle , uncaught error
+## Ready with esliint ,logger ,global errorhandle , uncaught error,Zod
