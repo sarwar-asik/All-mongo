@@ -11,11 +11,11 @@ const createUser = catchAsync(async (req: Request, res: Response,next:NextFuncti
   // console.log(user, 'from controller=================');
   // console.log('hitted', data);
   const result = await UserService.createUserServices(user);
-  next()
   if (result) {
     sendResponse(res,{success:true,message:"successfully create semester",statusCode:200,data:result})
+    next()
   }
-});
+})
 
 const getUser = catchAsync(async (req: Request, res: Response) => {
   const data = await User.find();

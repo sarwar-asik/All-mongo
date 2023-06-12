@@ -209,3 +209,20 @@
         mainFUnction()
 
 
+
+
+### for handle error for  unknown apiii hit error handle in app.ts 
+
+        app.use((req: Request, res: Response, next: NextFunction) => {
+                res.status(httpStatus.NOT_FOUND).json({
+                        success: false,
+                        message: 'NOt Found',
+                        errorMessages: [
+                        {
+                         path:req.originalUrl,
+                         message: 'API Not Found',
+                        },
+                        ],
+                });
+                next();
+        });

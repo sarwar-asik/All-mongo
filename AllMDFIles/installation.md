@@ -90,13 +90,13 @@
 
 
                 const sendResponse = <T>( res: Response, data:IApiResponse<T> ): void => {
-                const ResponseData :IApiResponse<T> ={
-                statusCode: data.statusCode,
-                success: data.success,
-                message: data.message || null,
-                data: data.data || null,
-                }
-                res.status(data.statusCode).json(ResponseData);
+                        const ResponseData :IApiResponse<T> ={
+                                statusCode: data.statusCode,
+                                success: data.success,
+                                message: data.message || null,
+                                data: data.data || null,
+                        }
+                         res.status(data.statusCode).json(ResponseData);
                 };
 
                 export default sendResponse;
@@ -104,3 +104,20 @@
        use in controller >>>>>>>>
 
          sendResponse(res,{success:true,message:"successfully create semester",statusCode:200,data:result})
+
+
+### for handle error for  unknown apiii hit error handle in app.ts 
+
+        app.use((req: Request, res: Response, next: NextFunction) => {
+                res.status(httpStatus.NOT_FOUND).json({
+                        success: false,
+                        message: 'NOt Found',
+                        errorMessages: [
+                        {
+                         path:req.originalUrl,
+                         message: 'API Not Found',
+                        },
+                        ],
+                });
+                next();
+        });

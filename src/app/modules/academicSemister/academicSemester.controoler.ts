@@ -12,18 +12,20 @@ const createAcademicSemester = catchAsync(
     const result = await academicSemesterService.createAcademicSemesterService(
       academicSemester
     )
-    next()
+    
     if (result) {
      sendResponse(res,{success:true,message:"successfully create semester",statusCode:200,data:result})
+     next()
     }
   }
 );
 
 const getAcademicSemester: RequestHandler = catchAsync(
-  async (req: Request, res: Response) => {
+  async (req: Request, res: Response,next:NextFunction) => {
     const data = await AcademicSemester.find();
     if (data.length > 0) {
       sendResponse(res,{success:true,message:"successfully get semester",statusCode:200,data:data})
+      next()
     } else {
       res.status(400).send({ status: false, message: 'Not found data' });
     }
