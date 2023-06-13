@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 
 import ApiError from '../../../errors/ApiError';
+import { IPaginationOPtion } from '../../../interfaces/IPagination';
 import { AcademicSemester } from './AcademicSemesterModel';
 import { academicSemesterTittleCodeMapper } from './academicSemester.const';
 import { IAcademicSemester } from './academicSemister.interace';
@@ -19,4 +20,16 @@ const createAcademicSemesterService = async (
   return result;
 };
 
-export const academicSemesterService = { createAcademicSemesterService };
+
+
+
+const GetPaginationSemesterService =(paginationOption:IPaginationOPtion) =>{
+
+  return paginationOption
+
+}
+
+
+
+
+export const academicSemesterService = { createAcademicSemesterService ,GetPaginationSemesterService};
