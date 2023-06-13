@@ -55,10 +55,27 @@ const getAllPaginationSemester: RequestHandler = catchAsync(
 //   sortBy:req.query.sortBy,
 //   sortOrder:req.query.sortOrder,
 // }
-const paginationOption= pick(req.query,paginationFields)
 
-// 
 
+
+  //   *** system-1  ***///
+
+  //   const finalObj:any = {}
+  //       for (const key of paginationFields) {
+  //         if (req.query && Object.hasOwnProperty.call(req.query, key)) {
+  //           // console.log(Object.hasOwnProperty.call(obj, key));
+      
+  //           finalObj[key] = req.query[key];
+  //         }
+  //       }
+  //       // console.log(finalObj,"form connnnnnnnn");
+  //  const result1 = await academicSemesterService.GetPaginationSemesterService(finalObj)
+
+
+        
+//   *** system-2  ***///
+        
+    const paginationOption= pick(req.query,paginationFields)
 
     const result = await academicSemesterService.GetPaginationSemesterService(paginationOption)
 

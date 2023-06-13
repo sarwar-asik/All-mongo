@@ -12,15 +12,28 @@
                 // }
 
                 <!-- or  -->
+        //   *** system-1  ***///
 
-                const paginationOption= pick(req.query,["page","limit","sortBy","sortOrder"])
+                //   const finalObj:any = {}
+                //       for (const key of paginationFields) {
+                //         if (req.query && Object.hasOwnProperty.call(req.query, key)) {
+                //           // console.log(Object.hasOwnProperty.call(obj, key));
+                    
+                //           finalObj[key] = req.query[key];
+                //         }
+                //       }
+                //       // console.log(finalObj,"form connnnnnnnn");
+                //  const result1 = await academicSemesterService.GetPaginationSemesterService(finalObj)
 
-                <!-- or  -->
 
-                const paginationOption= pick(req.query,paginationFields)
+                        
+          //   *** system-2  ***///
 
+       
+            const paginationOption= pick(req.query,["page","limit","sortBy","sortOrder"])
+                     <!-- or  -->
 
-
+            const paginationOption= pick(req.query,paginationFields)
 
 
             const result = await academicSemesterService.GetPaginationSemesterService(paginationOption)
@@ -37,6 +50,13 @@
         );
 
 ## Create src>shared>pick > (for get {"page": "1","limit": "10"} by pick(req.query,["page","limit","sortBY","sortBY"])) ::::
+
+       
+      
+
+
+     
+
 
         const pick = <T extends Record<string, unknown>, k extends keyof T>(obj: T,keys: k[]): Partial<T> => {
             console.log('sortItem', obj, keys, 'From sort');
