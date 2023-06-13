@@ -7,7 +7,7 @@ import { IGenericSemesterResponse } from '../../../interfaces/ICommon';
 import { IPaginationOPtion } from '../../../interfaces/IPagination';
 import { AcademicSemester } from './AcademicSemesterModel';
 import { academicSemesterTittleCodeMapper } from './academicSemester.const';
-import { IAcademicSemester } from './academicSemister.interace';
+import { IAcademicSemester, ISemesterFilter } from './academicSemister.interace';
 import httpStatus from 'http-status';
 
 const createAcademicSemesterService = async (
@@ -23,8 +23,11 @@ const createAcademicSemesterService = async (
   return result;
 };
 
+
 const GetPaginationSemesterService = async (
-  paginationOption: Partial<IPaginationOPtion>
+  filters:ISemesterFilter,
+  paginationOption: IPaginationOPtion
+  
 ): Promise<IGenericSemesterResponse<IAcademicSemester[]>> => {
   // const { page = 1, limit = 10 } = paginationOption;
   // const skip = (page - 1) * limit;
@@ -45,7 +48,7 @@ const GetPaginationSemesterService = async (
       page:page,
       limit:limit,
       total:total,
-    },
+    } ,
     data: result,
   };
 };

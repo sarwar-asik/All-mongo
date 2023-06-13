@@ -70,10 +70,15 @@ const getAllPaginationSemester: RequestHandler = catchAsync(
 
     //   *** system-2  ***///
 
+
     const paginationOptions = pick(req.query, paginationFields);
 
+    const filters = pick(req.query,["SearchTerm"])
+
     const result = await academicSemesterService.GetPaginationSemesterService(
-      paginationOptions
+      filters,
+      paginationOptions,
+  
     );
     // console.log(result);
 
@@ -81,7 +86,7 @@ const getAllPaginationSemester: RequestHandler = catchAsync(
       success: true,
       message: 'successfully get semester',
       statusCode: 200,
-      meta: result.meta || null,
+      meta: result?.meta || null,
       data: result.data,
     });
   }
