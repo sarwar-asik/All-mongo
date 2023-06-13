@@ -1,3 +1,4 @@
+import { IAcademicSemester } from './academicSemister.interace';
 /* eslint-disable no-console */
 import { NextFunction, Request, RequestHandler, Response } from 'express';
 import { academicSemesterService } from './academicSemesterServices';
@@ -45,48 +46,44 @@ const getAllSemester: RequestHandler = catchAsync(
   }
 );
 
-
 const getAllPaginationSemester: RequestHandler = catchAsync(
-  async (req: Request, res: Response, next: NextFunction) => {
+  async (req: Request, res: Response) => {
+    // const paginationOption={
+    //   page:Number( req.query.page),
+    //   limit:Number(req.query.limit),
+    //   sortBy:req.query.sortBy,
+    //   sortOrder:req.query.sortOrder,
+    // }
 
-// const paginationOption={
-//   page:Number( req.query.page),
-//   limit:Number(req.query.limit),
-//   sortBy:req.query.sortBy,
-//   sortOrder:req.query.sortOrder,
-// }
+    //   *** system-1  ***///
 
+    //   const finalObj:any = {}
+    //       for (const key of paginationFields) {
+    //         if (req.query && Object.hasOwnProperty.call(req.query, key)) {
+    //           // console.log(Object.hasOwnProperty.call(obj, key));
 
+    //           finalObj[key] = req.query[key];
+    //         }
+    //       }
+    //       // console.log(finalObj,"form connnnnnnnn");
+    //  const result1 = await academicSemesterService.GetPaginationSemesterService(finalObj)
 
-  //   *** system-1  ***///
+    //   *** system-2  ***///
 
-  //   const finalObj:any = {}
-  //       for (const key of paginationFields) {
-  //         if (req.query && Object.hasOwnProperty.call(req.query, key)) {
-  //           // console.log(Object.hasOwnProperty.call(obj, key));
-      
-  //           finalObj[key] = req.query[key];
-  //         }
-  //       }
-  //       // console.log(finalObj,"form connnnnnnnn");
-  //  const result1 = await academicSemesterService.GetPaginationSemesterService(finalObj)
+    const paginationOptions = pick(req.query, paginationFields);
 
+    const result = await academicSemesterService.GetPaginationSemesterService(
+      paginationOptions
+    );
+    // console.log(result);
 
-        
-//   *** system-2  ***///
-        
-    const paginationOption= pick(req.query,paginationFields)
-
-    const result = await academicSemesterService.GetPaginationSemesterService(paginationOption)
-
-    
-        sendResponse(res, {
-          success: true,
-          message: 'successfully get semester',
-          statusCode: 200,
-          data: result,
-        });
-       
+    sendResponse<IAcademicSemester[]>(res, {
+      success: true,
+      message: 'successfully get semester',
+      statusCode: 200,
+      meta: result.meta || null,
+      data: result.data,
+    });
   }
 );
 

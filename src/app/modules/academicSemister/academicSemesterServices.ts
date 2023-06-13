@@ -1,6 +1,9 @@
 /* eslint-disable no-console */
 
+import { SortOrder } from 'mongoose';
 import ApiError from '../../../errors/ApiError';
+import calculatePagination from '../../../helpers/paginationHelpers';
+import { IGenericSemesterResponse } from '../../../interfaces/ICommon';
 import { IPaginationOPtion } from '../../../interfaces/IPagination';
 import { AcademicSemester } from './AcademicSemesterModel';
 import { academicSemesterTittleCodeMapper } from './academicSemester.const';
@@ -20,16 +23,34 @@ const createAcademicSemesterService = async (
   return result;
 };
 
+const GetPaginationSemesterService = async (
+  paginationOption: Partial<IPaginationOPtion>
+): Promise<IGenericSemesterResponse<IAcademicSemester[]>> => {
+  // const { page = 1, limit = 10 } = paginationOption;
+  // const skip = (page - 1) * limit;
 
+  const {page,limit,skip,sortBy,sortOrder} = calculatePagination(paginationOption)
 
+  const sortCondition:{[key:string]:SortOrder} ={}
 
-const GetPaginationSemesterService =(paginationOption:IPaginationOPtion) =>{
+  if(sortBy && sortCondition){
+    sortCondition[sortBy] = sortOrder
+  }
 
-  return paginationOption
+  const result = await AcademicSemester.find({}).sort(sortCondition).skip(skip).limit(limit);
+  //  console.log(result);
+  const total = await AcademicSemester.countDocuments();
+  return {
+    meta: {
+      page:page,
+      limit:limit,
+      total:total,
+    },
+    data: result,
+  };
+};
 
-}
-
-
-
-
-export const academicSemesterService = { createAcademicSemesterService ,GetPaginationSemesterService};
+export const academicSemesterService = {
+  createAcademicSemesterService,
+  GetPaginationSemesterService,
+};

@@ -49,6 +49,15 @@
         }
         );
 
+
+        ***Note ***   
+           function getObjectKeysAsArray(obj: Record<string, any>): string[] {
+                 return Object.keys(obj);
+            }
+            const keysArray = getObjectKeysAsArray(req.query);
+           <!-- console.log(keysArray,"aaaaaa") -->
+       const paginationOption= pick(req.query,keysArray)
+
 ## Create src>shared>pick > (for get {"page": "1","limit": "10"} by pick(req.query,["page","limit","sortBY","sortBY"])) ::::
 
        
@@ -67,7 +76,7 @@
                     if (obj && Object.hasOwnProperty.call(obj, key)) {
                     // console.log(Object.hasOwnProperty.call(obj, key));
 
-                    finalObj[key] = obj[key];
+                    finalObj[key] = ob` j[key];
                     }
                 }
              //   console.log('Final object', finalObj);
@@ -81,8 +90,72 @@
 
             export const paginationFields = ["page","limit","sortBy","sortOrder"]
 
-        
+     
 
 #### create modules>AcademicSemester>AcademicSemesterService :::::
+
+                        
+        const GetPaginationSemesterService = async (paginationOption: Partial<IPaginationOPtion> ): Promise<IGenericSemesterResponse<IAcademicSemester[]>> => {
+                // const { page = 1, limit = 10 } = paginationOption;
+                // const skip = (page - 1) * limit;
+
+                const {page,limit,skip,sortBy,sortOrder} = calculatePagination(paginationOption)
+
+                const sortCondition:{[key:string]:SortOrder} ={}
+
+                if(sortBy && sortCondition){
+                         sortCondition[sortBy] = sortOrder
+                }
+
+                const result = await AcademicSemester.find({}).sort(sortCondition).skip(skip).limit(limit);
+                //  console.log(result);
+                const total = await AcademicSemester.countDocuments();
+                return {
+                        meta: {
+                        page:page,
+                        limit:limit,
+                        total:total,
+                },
+                data: result,
+                };
+        };
+
+
+#### src>helper>paginationHelper.ts ::::
+        import { SortOrder } from "mongoose";
+
+        type IOptions = {
+        page?: number;
+        limit?: number;
+        sortBy?:string;
+        sortOrder?:SortOrder
+        };
+
+        type IOptionResult = {
+        page: number;
+        limit: number;
+        skip: number;
+        sortBy:string;
+        sortOrder:SortOrder
+        };
+
+        const calculatePagination = (options: IOptions): IOptionResult => {
+                const page = Number(options.page || 1);
+                const limit = Number(options.limit || 10);
+                const skip = (page - 1) * limit;
+
+
+                const sortBy     = options.sortBy || "createdAt"
+                const sortOrder = options.sortOrder || "desc"
+
+                return {
+                page,
+                limit,
+                skip,
+                sortBy,
+                sortOrder
+                };
+        };
+
 
 
