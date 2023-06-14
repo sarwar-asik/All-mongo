@@ -9,7 +9,7 @@ import pick from '../../../shared/pick';
 import { paginationFields } from '../../../constant/pagination';
 
 const createAcademicSemester = catchAsync(
-  async (req: Request, res: Response, next: NextFunction) => {
+  async (req: Request, res: Response) => {
     const { ...academicSemester } = req.body;
     // console.log(academicSemester, 'from controller=================');
     const result = await academicSemesterService.createAcademicSemesterService(
@@ -23,7 +23,7 @@ const createAcademicSemester = catchAsync(
         statusCode: 200,
         data: result,
       });
-      next();
+      // next();
     }
   }
 );
@@ -73,7 +73,8 @@ const getAllPaginationSemester: RequestHandler = catchAsync(
 
     const paginationOptions = pick(req.query, paginationFields);
 
-    const filters = pick(req.query,["SearchTerm"])
+    const filters =  pick(req.query,  ["searchTerm"]);
+    // console.log(filters,"from controller",paginationOptions);
 
     const result = await academicSemesterService.GetPaginationSemesterService(
       filters,
