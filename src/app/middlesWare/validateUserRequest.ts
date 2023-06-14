@@ -1,10 +1,10 @@
 import { RequestHandler } from 'express'
-import {AnyZodObject} from 'zod';
+import {AnyZodObject, ZodEffects} from 'zod';
 
 
 
 // eslint-disable-next-line no-unused-vars
-const validateRequest = (schema :AnyZodObject):RequestHandler =>async(req,res,next):Promise<void>=>{
+const validateRequest = (schema :AnyZodObject | ZodEffects<AnyZodObject>):RequestHandler =>async(req,res,next):Promise<void>=>{
     try {
         await schema.parseAsync({
             body:req.body,
@@ -19,5 +19,6 @@ const validateRequest = (schema :AnyZodObject):RequestHandler =>async(req,res,ne
         next(error)
       }
 }
+
 
 export default validateRequest

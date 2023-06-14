@@ -1,6 +1,6 @@
 import { IAcademicSemester } from './academicSemister.interace';
 /* eslint-disable no-console */
-import { NextFunction, Request, RequestHandler, Response } from 'express';
+import {Request, RequestHandler, Response } from 'express';
 import { academicSemesterService } from './academicSemesterServices';
 import { AcademicSemester } from './AcademicSemesterModel';
 import catchAsync from '../../../shared/catchAsync';
@@ -85,7 +85,7 @@ const getAllPaginationSemester: RequestHandler = catchAsync(
       success: true,
       message: 'successfully get semester',
       statusCode: 200,
-      meta: result?.meta || null,
+      meta: result?.meta || null ||undefined,
       data: result.data,
     });
   }
@@ -105,15 +105,41 @@ const getSingleSemester =catchAsync(
       success: true,
       message: 'successfully get semester',
       statusCode: 200,
-   
-      data: result,
-    });
+      data: result ||undefined || null ,
+    })
   }
 )
+
+
+const UpdateSemesterController = catchAsync(
+  async (req: Request, res: Response) => {
+    const id = req.params.id
+    const updateData =req.body
+    // console.log(id,updateData);
+
+    // console.log(academicSemester, 'from controller=================');
+
+    const result = await academicSemesterService.updateAcademicSemesterService(
+      id,
+      updateData
+    )
+
+
+      sendResponse(res, {
+        success: true,
+        message: 'successfully create semester',
+        statusCode: 200,
+        data: result,
+      });
+      // next();
+   
+  }
+);
 
 export const AcademicSemesterController = {
   createAcademicSemester,
   getAllSemester,
   getAllPaginationSemester,
-  getSingleSemester
+  getSingleSemester,
+  UpdateSemesterController
 };
