@@ -70,16 +70,14 @@ const getAllPaginationSemester: RequestHandler = catchAsync(
 
     //   *** system-2  ***///
 
-
     const paginationOptions = pick(req.query, paginationFields);
 
-    const filters =  pick(req.query,  ["searchTerm","title",'code','year']);
+    const filters = pick(req.query, ['searchTerm', 'title', 'code', 'year']);
     // console.log(filters,"from controller",paginationOptions);
 
     const result = await academicSemesterService.GetPaginationSemesterService(
       filters,
-      paginationOptions,
-  
+      paginationOptions
     );
     // console.log(result);
 

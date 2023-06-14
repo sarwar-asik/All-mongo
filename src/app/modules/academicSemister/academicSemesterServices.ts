@@ -105,7 +105,9 @@ const GetPaginationSemesterService = async (
     sortCondition[sortBy] = sortOrder;
   }
 
-  const result = await AcademicSemester.find({ $and: andCondition })
+  const whereCondition  = andCondition.length >0 ? {$and:andCondition}:{}
+
+  const result = await AcademicSemester.find(whereCondition)
     .sort(sortCondition)
     .skip(skip)
     .limit(limit)
