@@ -121,3 +121,12 @@
                 });
                 next();
         });
+
+## Change a object to an array ;
+
+
+         Object.keys(YourObject) 
+                 ///only key in array['title','year']
+
+         Object.entries(filtersData) 
+                ///with key and value [['title','autumn'],['year','2023']]

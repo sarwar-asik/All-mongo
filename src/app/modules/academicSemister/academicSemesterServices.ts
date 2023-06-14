@@ -1,3 +1,4 @@
+
 /* eslint-disable no-console */
 
 import { SortOrder } from 'mongoose';
@@ -27,14 +28,15 @@ const createAcademicSemesterService = async (
 };
 
 const GetPaginationSemesterService = async (
-  filters: ISemesterFilter,
-  paginationOption: IPaginationOPtion
+  filters: Partial<ISemesterFilter>,
+  paginationOption: Partial<IPaginationOPtion>
 ): Promise<IGenericSemesterResponse<IAcademicSemester[]>> => {
   // const { page = 1, limit = 10 } = paginationOption;
   // const skip = (page - 1) * limit;
   // console.log(filters,"from");
-  const { searchTerm } = filters;
+  const { searchTerm,...filtersData } = filters;
 
+  // console.log(searchTerm,"search",filtersData);
 
 
   // const andCondition = [
@@ -78,9 +80,24 @@ const GetPaginationSemesterService = async (
     })
   }
 
+
+
+  if(Object.keys(filtersData).length){
+    // console.log(Object.keys(filtersData),"new Array");
+  
+   andCondition.push({
+    $and:Object.entries(filtersData).map(([field,value])=>({
+      [field]:value
+    }))
+   })
+
+  }
+
+  // console.log(searchTerm, 'searchTerm', filters,filtersData);
+
+
   const { page, limit, skip, sortBy, sortOrder } =
     calculatePagination(paginationOption);
-  console.log(andCondition, 'searchTerm', filters);
 
   const sortCondition: { [key: string]: SortOrder } = {};
 
@@ -97,7 +114,7 @@ const GetPaginationSemesterService = async (
   const total = await AcademicSemester.countDocuments();
   return {
     meta: {
-      page: page,
+      page: page as number,
       limit: limit,
       total: total,
     },

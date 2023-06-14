@@ -29,7 +29,7 @@ const createAcademicSemester = catchAsync(
 );
 
 const getAllSemester: RequestHandler = catchAsync(
-  async (req: Request, res: Response, next: NextFunction) => {
+  async (req: Request, res: Response) => {
     const data = await AcademicSemester.find();
 
     if (data.length > 0) {
@@ -73,7 +73,7 @@ const getAllPaginationSemester: RequestHandler = catchAsync(
 
     const paginationOptions = pick(req.query, paginationFields);
 
-    const filters =  pick(req.query,  ["searchTerm"]);
+    const filters =  pick(req.query,  ["searchTerm","title",'code','year']);
     // console.log(filters,"from controller",paginationOptions);
 
     const result = await academicSemesterService.GetPaginationSemesterService(

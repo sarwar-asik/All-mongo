@@ -1,4 +1,5 @@
 ## pagination steps
+    localhost:5000/semester/AllSemester/?page=1&limit=5&sortBy=code&sortOrder=asc
 
 #### create modules>AcademicSemester>AcademicSemesterController ::::
 
