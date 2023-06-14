@@ -6,21 +6,6 @@
     "auditLog": "C:\\course\\NEXT_LEVEL_2\\university-mangement\\logs\\winston\\success\\.fd0cfcf5da577cba7a8eaeb5b87155ab3d3dc901-audit.json",
     "files": [
         {
-            "date": 1686680885951,
-            "name": "C:\\course\\NEXT_LEVEL_2\\university-mangement\\logs\\winston\\success\\ph-2023-06-14-00-success.log",
-            "hash": "d29b50e0fa0c95cb915595138e7a0b15e2844950cb381247d26ea3a1ae7f1dd8"
-        },
-        {
-            "date": 1686682805880,
-            "name": "C:\\course\\NEXT_LEVEL_2\\university-mangement\\logs\\winston\\success\\ph-2023-06-14-01-success.log",
-            "hash": "0147ee0c58e149935d184199dc1abff8a4b0e52e500e0ce6f21cff14d6f389ff"
-        },
-        {
-            "date": 1686686486502,
-            "name": "C:\\course\\NEXT_LEVEL_2\\university-mangement\\logs\\winston\\success\\ph-2023-06-14-02-success.log",
-            "hash": "f8dddcc7e696f10deafe0ce714636e12efaf51a4989e66712c008f194e552b95"
-        },
-        {
             "date": 1686728309346,
             "name": "C:\\course\\NEXT_LEVEL_2\\university-mangement\\logs\\winston\\success\\ph-2023-06-14-13-success.log",
             "hash": "fd7d7d31e6dfdbe9c63a1a9f2110afc3e33674b6f16a0bb69d8dcf099980b2b5"
@@ -49,6 +34,16 @@
             "date": 1686765617108,
             "name": "C:\\course\\NEXT_LEVEL_2\\university-mangement\\logs\\winston\\success\\ph-2023-06-15-00-success.log",
             "hash": "9719b5fc41269e0814f9226c957cc5fd4de8bbd74650ae17226cf45c354db538"
+        },
+        {
+            "date": 1686769351852,
+            "name": "C:\\course\\NEXT_LEVEL_2\\university-mangement\\logs\\winston\\success\\ph-2023-06-15-01-success.log",
+            "hash": "ebaf1f0f0487ff7aa3d18667d358f1986ecd5e4dd05b47f3d7039eb08224c530"
+        },
+        {
+            "date": 1686773022935,
+            "name": "C:\\course\\NEXT_LEVEL_2\\university-mangement\\logs\\winston\\success\\ph-2023-06-15-02-success.log",
+            "hash": "94ee1720a34fea8101a6f968f8116d4094820ece6f128df2fcaf39d33c651ed1"
         }
     ],
     "hashType": "sha256"

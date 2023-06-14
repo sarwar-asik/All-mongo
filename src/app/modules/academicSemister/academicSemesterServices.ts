@@ -136,6 +136,8 @@ const GetSingleSemesterService = async (
  
 };
 
+
+
 const updateAcademicSemesterService = async (
   id :string,
   payload:Partial<IAcademicSemester>
@@ -153,9 +155,23 @@ const updateAcademicSemesterService = async (
   return result;
 };
 
+
+const DeleteSingleSemesterService = async (
+  id:string
+): Promise<IAcademicSemester | null> => {
+
+  // console.log(id,"form services");
+  const result = await AcademicSemester.findByIdAndDelete(id)
+  .select({ title: 1, code: 1, year: 1 });
+  // console.log(result);
+  return result
+ 
+};
+
 export const academicSemesterService = {
   createAcademicSemesterService,
   GetPaginationSemesterService,
   GetSingleSemesterService,
-  updateAcademicSemesterService
+  updateAcademicSemesterService,
+  DeleteSingleSemesterService
 };

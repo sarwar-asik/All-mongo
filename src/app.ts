@@ -24,7 +24,7 @@ app.use(express.urlencoded({ extended: true }));
 //*** */ or ***////
 app.use('/api/v1', routes);
 
-app.get('/', async (req: Request, res: Response, next: NextFunction) => {
+app.get('/', async (req: Request, res: Response) => {
   //  const addUser = await createUser({id:"445",role:"admin",password:"asdfasdf"})
 
   // res.send(addUser)
@@ -37,6 +37,7 @@ app.get('/', async (req: Request, res: Response, next: NextFunction) => {
     success: true,
     message: 'Running the University Management Server',
     statusCode: 201,
+    data:null
   });
   // next();
 });

@@ -90,6 +90,8 @@ const getAllPaginationSemester: RequestHandler = catchAsync(
     });
   }
 );
+
+
 const getSingleSemester =catchAsync(
   async(req:Request,res:Response)=>{
     const id = req.params.id;
@@ -127,7 +129,7 @@ const UpdateSemesterController = catchAsync(
 
       sendResponse(res, {
         success: true,
-        message: 'successfully create semester',
+        message: 'successfully updated semester',
         statusCode: 200,
         data: result,
       });
@@ -136,10 +138,31 @@ const UpdateSemesterController = catchAsync(
   }
 );
 
+const deleteSingleSemester =catchAsync(
+  async(req:Request,res:Response)=>{
+    const id = req.params.id;
+    
+    // console.log(req.params);
+    const result = await academicSemesterService.DeleteSingleSemesterService(
+      id
+     
+    );
+    // console.log(result);
+
+    sendResponse<IAcademicSemester[]>(res, {
+      success: true,
+      message: 'successfully Deleted semester',
+      statusCode: 200,
+      data: result ||undefined || null ,
+    })
+  }
+)
+
 export const AcademicSemesterController = {
   createAcademicSemester,
   getAllSemester,
   getAllPaginationSemester,
   getSingleSemester,
-  UpdateSemesterController
+  UpdateSemesterController,
+  deleteSingleSemester
 };

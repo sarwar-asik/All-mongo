@@ -16,6 +16,7 @@ router.get('/AllSemester', AcademicSemesterController.getAllPaginationSemester);
 router.patch('/:id',
 validateRequest(academicValidation.UpdateAcademicSemesterSchema),
  AcademicSemesterController.UpdateSemesterController);
+ router.delete('/:id',AcademicSemesterController.deleteSingleSemester)
 
 router.get('/:id',AcademicSemesterController.getSingleSemester)
 router.get('/', AcademicSemesterController.getAllSemester);
