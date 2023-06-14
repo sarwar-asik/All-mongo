@@ -90,9 +90,30 @@ const getAllPaginationSemester: RequestHandler = catchAsync(
     });
   }
 );
+const getSingleSemester =catchAsync(
+  async(req:Request,res:Response)=>{
+    const id = req.params.id;
+    
+    // console.log(req.params);
+    const result = await academicSemesterService.GetSingleSemesterService(
+      id
+     
+    );
+    // console.log(result);
+
+    sendResponse<IAcademicSemester[]>(res, {
+      success: true,
+      message: 'successfully get semester',
+      statusCode: 200,
+   
+      data: result,
+    });
+  }
+)
 
 export const AcademicSemesterController = {
   createAcademicSemester,
   getAllSemester,
   getAllPaginationSemester,
+  getSingleSemester
 };

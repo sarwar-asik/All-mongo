@@ -226,3 +226,41 @@
                 });
                 next();
         });
+
+
+### handle castError for mongoose incorrect _id in src>app>middleware>globalErrorHandler ::::
+
+           else if(error?.name ==="CastError"){
+                // res.status(400).json({error})
+                const simplifiedError = handleCastError(error)
+                statusCode = simplifiedError.statusCode;
+                message =simplifiedError.message;
+                errorMessage = simplifiedError.errorMessages;
+            }
+
+    *****  in src>app>error>handleCastError ::::::
+        import mongoose from "mongoose";
+        import { IGenericErrorMessage } from "../interfaces/Ierror";
+
+            const handleCastError =(error:mongoose.Error.CastError)=>{
+
+
+                const errors:IGenericErrorMessage[] =[
+                    {
+                        path:error.path,
+                        message:error.message
+                    }
+                ] 
+
+                const statusCode =400;
+                return {
+                    statusCode,
+                    message:"CastError Error",
+                    errorMessages:errors
+                }
+            }
+
+        export default handleCastError
+
+
+ 

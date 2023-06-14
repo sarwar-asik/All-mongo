@@ -11,6 +11,7 @@ import { errorLogger } from '../../shared/logger'
 
 import  {ZodError} from "zod"
 import handleZOdError from '../../errors/handleZOdError'
+import handleCastError from '../../errors/handleCastError'
 
 
 
@@ -39,6 +40,16 @@ const GlobalHandler:ErrorRequestHandler = (error ,req, res,next) => {
 
 
   }
+  else if(error?.name ==="CastError"){
+    // res.status(400).json({error})
+    const simplifiedError = handleCastError(error)
+    statusCode = simplifiedError.statusCode;
+    message =simplifiedError.message;
+    errorMessage = simplifiedError.errorMessages;
+
+
+  }
+
   
   
   else if (error instanceof ApiError) {
@@ -49,7 +60,7 @@ const GlobalHandler:ErrorRequestHandler = (error ,req, res,next) => {
     message = error.message
     errorMessage = error?.message ? [{ path: '', message: error?.message }] : []
   }
-
+ 
  
 
   res.status(statusCode).json({
