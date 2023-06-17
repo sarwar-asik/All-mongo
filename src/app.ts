@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import httpStatus from 'http-status';
 // const express = require('express')
 import express, { Application, NextFunction, Request, Response } from 'express';
@@ -7,6 +8,8 @@ import GlobalHandler from './app/middlesWare/globalErrorHandler';
 
 import routes from './app/routes';
 import sendResponse from './shared/sendResponce';
+import { generateFacultyId } from './app/modules/users/user.utils';
+
 // import { createUser } from './app/modules/users/users.services'
 
 const app: Application = express();
@@ -37,7 +40,7 @@ app.get('/', async (req: Request, res: Response) => {
     success: true,
     message: 'Running the University Management Server',
     statusCode: 201,
-    data:null
+    data: null,
   });
   // next();
 });
@@ -51,12 +54,26 @@ app.use((req: Request, res: Response, next: NextFunction) => {
     message: 'NOt Found',
     errorMessages: [
       {
-        path:req.originalUrl,
+        path: req.originalUrl,
         message: 'API Not Found',
       },
     ],
   });
   next();
 });
+
+// for testing userId dynamic based on yaer and code ///
+// const academicSemester = {
+//   code: '01',
+//   year: '2025',
+// };
+
+const testId = async () => {
+  const testId = await generateFacultyId();
+
+  console.log(testId, 'testId from app.ts');
+};
+
+testId();
 
 export default app;

@@ -8,12 +8,12 @@ import { IGenericSemesterResponse } from '../../../interfaces/ICommon';
 import { IPaginationOPtion } from '../../../interfaces/IPagination';
 
 
-import { IFaculty, IFacultyFilter } from './acdemicFaculty.interface';
+import { IAcademicFaculty, IFacultyFilter } from './acdemicFaculty.interface';
 import { Faculty } from './acdemicFaculty.model';
 
 const createFacultyService = async (
-  payload: IFaculty
-): Promise<IFaculty> => {
+  payload: IAcademicFaculty
+): Promise<IAcademicFaculty> => {
   // console.log('paylod', payload);
   const result = await Faculty.create(payload);
   return result;
@@ -22,7 +22,7 @@ const createFacultyService = async (
 const GetPaginationFacultyService = async (
   filters: Partial<IFacultyFilter>,
   paginationOption: Partial<IPaginationOPtion>
-): Promise<IGenericSemesterResponse<IFaculty[]>> => {
+): Promise<IGenericSemesterResponse<IAcademicFaculty[]>> => {
 
   const { searchTerm} = filters;
 
@@ -78,7 +78,7 @@ const GetPaginationFacultyService = async (
 
 const GetSingleFacultyService = async (
   id:string
-): Promise<IFaculty | null> => {
+): Promise<IAcademicFaculty | null> => {
 
   console.log(id,"form services");
   const result = await Faculty.findById(id)
@@ -92,8 +92,8 @@ const GetSingleFacultyService = async (
 
 const updateFacultyService = async (
   id :string,
-  payload:Partial<IFaculty>
-): Promise<IFaculty | null> => {
+  payload:Partial<IAcademicFaculty>
+): Promise<IAcademicFaculty | null> => {
   
 
 
@@ -105,7 +105,7 @@ const updateFacultyService = async (
 
 const DeleteSingleFacultyService = async (
   id:string
-): Promise<IFaculty | null> => {
+): Promise<IAcademicFaculty | null> => {
 
   // console.log(id,"form services");
   const result = await Faculty.findByIdAndDelete(id)

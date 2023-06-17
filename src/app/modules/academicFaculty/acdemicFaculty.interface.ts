@@ -1,14 +1,11 @@
 import { Model } from 'mongoose';
 
-
-export type IFaculty = {
+export type IAcademicFaculty = {
   title: string;
 };
 
+export type FacultyModel = Model<IAcademicFaculty>;
 
-export type FacultyModel = Model<IFaculty>;
-
-
-export type IFacultyFilter ={
-  searchTerm:string
-}
+export type IFacultyFilter = {
+  searchTerm: string;
+};

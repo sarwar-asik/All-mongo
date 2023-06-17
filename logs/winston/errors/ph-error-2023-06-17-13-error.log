@@ -1,0 +1,37 @@
+{
+  level: 'error',
+  label: 'right meow!',
+  timestamp: '2023-06-17T07:18:50.388Z'
+}
+{
+  level: 'error',
+  label: 'right meow!',
+  timestamp: '2023-06-17T07:19:20.182Z'
+}
+{
+  level: 'error',
+  label: 'right meow!',
+  timestamp: '2023-06-17T07:20:01.432Z'
+}
+{
+  level: 'error',
+  message: 'UnCaught rejection is detected from serve.ts Operation `users.findOne()` buffering timed out after 10000ms',
+  stack: 'MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n' +
+    '    at Timeout.<anonymous> (C:\\course\\NEXT_LEVEL_2\\university-mangement\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:185:23)\n' +
+    '    at listOnTimeout (node:internal/timers:559:17)\n' +
+    '    at processTimers (node:internal/timers:502:7)',
+  label: 'right meow!',
+  timestamp: '2023-06-17T07:20:25.669Z'
+}
+{
+  errno: undefined,
+  code: 'ECONNREFUSED',
+  syscall: 'querySrv',
+  hostname: '_mongodb._tcp.cluster0.ysfeeva.mongodb.net',
+  level: 'error',
+  message: '\x1B[4m\x1B[31mfailed to connect \x1B[39m\x1B[24m querySrv ECONNREFUSED _mongodb._tcp.cluster0.ysfeeva.mongodb.net',
+  stack: 'Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ysfeeva.mongodb.net\n' +
+    '    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:240:17)',
+  label: 'right meow!',
+  timestamp: '2023-06-17T07:51:34.530Z'
+}

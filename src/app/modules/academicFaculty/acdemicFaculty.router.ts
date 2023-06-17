@@ -17,11 +17,12 @@ router.get('/All-faculty', FacultyController.getAllPaginationFaculty);
 router.patch('/:id',
 validateRequest(academicFacultyValidation.createFacultySchema),
 FacultyController.UpdateFacultyController);
-
  router.delete('/:id',FacultyController.deleteSingleFaculty)
 
 router.get('/:id',FacultyController.getSingleFaculty)
-router.get('/', FacultyController.getAllFaculty);
+router.get('/', FacultyController.getAllFaculty)
+
+
 
 
 export const facultyRouter = router;

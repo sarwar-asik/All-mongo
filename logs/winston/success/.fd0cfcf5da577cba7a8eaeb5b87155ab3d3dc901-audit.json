@@ -6,44 +6,39 @@
     "auditLog": "C:\\course\\NEXT_LEVEL_2\\university-mangement\\logs\\winston\\success\\.fd0cfcf5da577cba7a8eaeb5b87155ab3d3dc901-audit.json",
     "files": [
         {
-            "date": 1686728309346,
-            "name": "C:\\course\\NEXT_LEVEL_2\\university-mangement\\logs\\winston\\success\\ph-2023-06-14-13-success.log",
-            "hash": "fd7d7d31e6dfdbe9c63a1a9f2110afc3e33674b6f16a0bb69d8dcf099980b2b5"
+            "date": 1686973014124,
+            "name": "C:\\course\\NEXT_LEVEL_2\\university-mangement\\logs\\winston\\success\\ph-2023-06-17-09-success.log",
+            "hash": "22933dac7fe1a858130320c1c151ea9269f4213870c75ce24dd329d56c77d29d"
         },
         {
-            "date": 1686735658879,
-            "name": "C:\\course\\NEXT_LEVEL_2\\university-mangement\\logs\\winston\\success\\ph-2023-06-14-15-success.log",
-            "hash": "790df18f9e1d1892788a5ac5c45c50966736868252e05ab5c54ee138012e2002"
+            "date": 1686974407086,
+            "name": "C:\\course\\NEXT_LEVEL_2\\university-mangement\\logs\\winston\\success\\ph-2023-06-17-10-success.log",
+            "hash": "32ae70dc2f9ca643e2163c0bb018bef1c64a55c1dd35e8532fc0c348fa7442f3"
         },
         {
-            "date": 1686755715087,
-            "name": "C:\\course\\NEXT_LEVEL_2\\university-mangement\\logs\\winston\\success\\ph-2023-06-14-21-success.log",
-            "hash": "150555e0d9d8d7f033858580ba99b3603a3a91a21243ee07b732894163f1a7e1"
+            "date": 1686978049327,
+            "name": "C:\\course\\NEXT_LEVEL_2\\university-mangement\\logs\\winston\\success\\ph-2023-06-17-11-success.log",
+            "hash": "e579f93419afb0520a36859f6c9d97de4bc8f2c12592ec640a2fa6e4580c7935"
         },
         {
-            "date": 1686758469389,
-            "name": "C:\\course\\NEXT_LEVEL_2\\university-mangement\\logs\\winston\\success\\ph-2023-06-14-22-success.log",
-            "hash": "83ff5a0876db06967a0e9fe73e218b30c332b54f95eaee647e97f90e8f1f4921"
+            "date": 1686981600349,
+            "name": "C:\\course\\NEXT_LEVEL_2\\university-mangement\\logs\\winston\\success\\ph-2023-06-17-12-success.log",
+            "hash": "c52e60ab137f6f46aa99c09bb07fee0cab90dcc51b6e1d17346e0e8b3e59a650"
         },
         {
-            "date": 1686762343890,
-            "name": "C:\\course\\NEXT_LEVEL_2\\university-mangement\\logs\\winston\\success\\ph-2023-06-14-23-success.log",
-            "hash": "6386eafdec37b2e70c82b3d2db5d6f365100bb13d625a0240d875c17ea4a0eec"
+            "date": 1686985488404,
+            "name": "C:\\course\\NEXT_LEVEL_2\\university-mangement\\logs\\winston\\success\\ph-2023-06-17-13-success.log",
+            "hash": "4a63ef2c62320fedcda38eb10d2a85f2f9448617fe1bb5f6120ac05b97d9fdd8"
         },
         {
-            "date": 1686765617108,
-            "name": "C:\\course\\NEXT_LEVEL_2\\university-mangement\\logs\\winston\\success\\ph-2023-06-15-00-success.log",
-            "hash": "9719b5fc41269e0814f9226c957cc5fd4de8bbd74650ae17226cf45c354db538"
+            "date": 1686988801703,
+            "name": "C:\\course\\NEXT_LEVEL_2\\university-mangement\\logs\\winston\\success\\ph-2023-06-17-14-success.log",
+            "hash": "792530b2defde32d2df4d5321e8b2c89467f1288d0bcc871bfd4814d1d8db71c"
         },
         {
-            "date": 1686769351852,
-            "name": "C:\\course\\NEXT_LEVEL_2\\university-mangement\\logs\\winston\\success\\ph-2023-06-15-01-success.log",
-            "hash": "ebaf1f0f0487ff7aa3d18667d358f1986ecd5e4dd05b47f3d7039eb08224c530"
-        },
-        {
-            "date": 1686773022935,
-            "name": "C:\\course\\NEXT_LEVEL_2\\university-mangement\\logs\\winston\\success\\ph-2023-06-15-02-success.log",
-            "hash": "94ee1720a34fea8101a6f968f8116d4094820ece6f128df2fcaf39d33c651ed1"
+            "date": 1686992749151,
+            "name": "C:\\course\\NEXT_LEVEL_2\\university-mangement\\logs\\winston\\success\\ph-2023-06-17-15-success.log",
+            "hash": "e6b44c1f3ef1fbb33277421121ca5d9f9c2dd939b788eba6d33bd5dab1a5a084"
         }
     ],
     "hashType": "sha256"

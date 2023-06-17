@@ -3,14 +3,15 @@ import { User } from './user.model';
 import { IUser } from './user.interface';
 
 import config from '../../../config.ts/index';
-import { generateUserId } from './user.utils';
+import { generateFacultyId,  } from './user.utils';
 import ApiError from '../../../errors/ApiError';
 
 const createUserServices = async (user: IUser): Promise<IUser | null> => {
   if (!user?.password) {
     user.password = config.default_user_pass as string;
   }
-  const id = await generateUserId();
+  
+  const id = await generateFacultyId();
 
   user.id = id;
 
