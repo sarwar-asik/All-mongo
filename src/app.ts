@@ -38,7 +38,7 @@ app.get('/', async (req: Request, res: Response) => {
   // next("next error")
   sendResponse(res, {
     success: true,
-    message: 'Running the University Management Server',
+    message: 'Running the Cow hut server',
     statusCode: 201,
     data: null,
   });
