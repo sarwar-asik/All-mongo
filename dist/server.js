@@ -16,10 +16,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
 const config_ts_1 = __importDefault(require("./config.ts"));
 require("colors");
-const logger_1 = require("./shared/logger");
+// import { logger, errorLogger } from './shared/logger';
 const app_1 = __importDefault(require("./app"));
 process.on('uncaughtException', err => {
-    logger_1.errorLogger.error('UnCaught rejection is detected from serve.ts', err);
+    console.log('UnCaught rejection is detected from serve.ts', err);
     process.exit(1);
 });
 let server;
@@ -30,21 +30,21 @@ function mainFUnction() {
             yield mongoose_1.default.connect(config_ts_1.default.data_url, {
                 dbName: 'Cow-hut',
             });
-            logger_1.logger.info('db Connected successfully '.green.underline.bold);
+            console.log('db Connected successfully '.green.underline.bold);
             server = app_1.default.listen(config_ts_1.default.port, () => {
-                logger_1.logger.info(`server app listening on port ${config_ts_1.default.port}`.green.bold);
+                console.log(`server app listening on port ${config_ts_1.default.port}`.green.bold);
             });
         }
         catch (error) {
             // const  {name,message,stack}=error;
-            logger_1.errorLogger.error('failed to connect '.red.underline, error);
+            console.log('failed to connect '.red.underline, error);
         }
         process.on('unhandledRejection', error => {
             // eslint-disable-next-line no-console
             console.log('UnHandle rejection is detected and closing the main() in serve.ts');
             if (server) {
                 server.close(() => {
-                    logger_1.errorLogger.error(error);
+                    console.log(error);
                     process.exit(1);
                 });
             }
@@ -55,7 +55,7 @@ function mainFUnction() {
     });
 }
 process.on('SIGTERM', () => {
-    logger_1.logger.info('SIGTERM is received ');
+    console.log('SIGTERM is received ');
     if (server) {
         server.close();
     }

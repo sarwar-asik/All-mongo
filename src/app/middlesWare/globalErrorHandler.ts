@@ -7,7 +7,7 @@ import { IGenericErrorMessage } from '../../interfaces/Ierror'
 import handleValidationError from '../../errors/handleValidationError'
 import ApiError from '../../errors/ApiError'
 import configTs from '../../../src/config.ts/index'
-import { errorLogger } from '../../shared/logger'
+// import { errorLogger } from '../../shared/logger'
 
 import  {ZodError} from "zod"
 import handleZOdError from '../../errors/handleZOdError'
@@ -18,7 +18,7 @@ import handleCastError from '../../errors/handleCastError'
 const GlobalHandler:ErrorRequestHandler = (error ,req, res,next) => {
 
 
-  configTs.env === "development" ? console.log("globalErrorHandler",error):errorLogger.error("Error from globalError",error)
+  configTs.env === "development" ? console.log("globalErrorHandler",error):console.log("Error from globalError",error)
 
   let statusCode = 500
   let message = 'Something went wrong'

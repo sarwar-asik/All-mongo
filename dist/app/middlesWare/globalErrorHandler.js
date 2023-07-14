@@ -9,12 +9,12 @@ const index_1 = __importDefault(require("../../../src/config.ts/index"));
 const handleValidationError_1 = __importDefault(require("../../errors/handleValidationError"));
 const ApiError_1 = __importDefault(require("../../errors/ApiError"));
 const index_2 = __importDefault(require("../../../src/config.ts/index"));
-const logger_1 = require("../../shared/logger");
+// import { errorLogger } from '../../shared/logger'
 const zod_1 = require("zod");
 const handleZOdError_1 = __importDefault(require("../../errors/handleZOdError"));
 const handleCastError_1 = __importDefault(require("../../errors/handleCastError"));
 const GlobalHandler = (error, req, res, next) => {
-    index_2.default.env === "development" ? console.log("globalErrorHandler", error) : logger_1.errorLogger.error("Error from globalError", error);
+    index_2.default.env === "development" ? console.log("globalErrorHandler", error) : console.log("Error from globalError", error);
     let statusCode = 500;
     let message = 'Something went wrong';
     let errorMessage = [];
