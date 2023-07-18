@@ -9,6 +9,7 @@ import GlobalHandler from './app/middlesWare/globalErrorHandler';
 import routes from './app/routes';
 import sendResponse from './shared/sendResponce';
 import { generateFacultyId } from './app/modules/users/user.utils';
+import cookieParser from 'cookie-parser';
 
 // import { createUser } from './app/modules/users/users.services'
 
@@ -17,7 +18,7 @@ const app: Application = express();
 
 app.use(cors());
 app.use(express.json());
-// app.use(cook)
+app.use(cookieParser())
 app.use(express.urlencoded({ extended: true }));
 
 // Application
