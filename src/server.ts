@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import mongoose from 'mongoose';
-import config from './config.ts';
+import config from './config/index.js';
 import 'colors';
 // import { logger, errorLogger } from './shared/logger';
 import app from './app';

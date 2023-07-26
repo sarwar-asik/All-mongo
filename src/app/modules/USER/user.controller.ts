@@ -7,10 +7,12 @@ import sendResponse from '../../../shared/sendResponce';
 import { IUser } from './user.interface';
 import { jwtHelpers } from '../../../helpers/jwtHelpers';
 import { Secret } from 'jsonwebtoken';
-import config from '../../../config';
+
 import ApiError from '../../../errors/ApiError';
 import httpStatus from 'http-status';
 import bcrypt from 'bcrypt';
+import config from '../../../config';
+
 
 const createUser = catchAsync(async (req: Request, res: Response) => {
   const { ...user } = req.body;
