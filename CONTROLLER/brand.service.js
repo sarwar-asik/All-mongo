@@ -5,7 +5,7 @@ exports.createBrandService = async (data) => {
 //   const result = await BrandMOdel.create(data)
   const result = await BrandMOdel.create(data)
   return result;
-};
+}
 
 exports.getBrandService = async (data) => {
   console.log("from getBrand Service");
